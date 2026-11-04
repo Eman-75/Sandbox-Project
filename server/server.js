@@ -205,5 +205,12 @@ const PORT = process.env.PORT || 5000;
 app.get('/health', (_req, res) => {
     res.status(200).json({ status: 'ok' });
 });
+app.get('/health/db', (_req, res) => {
+    const connected = mongoose.connection.readyState === 1;
+    res.status(connected ? 200 : 503).json({
+        status: connected ? 'ok' : 'unavailable',
+        database: connected ? 'connected' : 'not connected',
+    });
+});
 
 httpServer.listen(PORT, () => console.log(`🚀 Backend running on port ${PORT}`));
