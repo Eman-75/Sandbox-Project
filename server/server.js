@@ -140,7 +140,7 @@ import { createServer } from 'http';
 dotenv.config();
 const app = express();
 const httpServer = createServer(app);
-const frontendUrl = process.env.FRONTEND_URL || 'http://localhost:5173';
+const frontendUrl = (process.env.FRONTEND_URL || 'http://localhost:5173').replace(/\/+$/, '');
 
 // Initialize socket.io server
 export const io = new Server(httpServer, {
