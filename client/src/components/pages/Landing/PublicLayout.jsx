@@ -56,7 +56,7 @@ export default function PublicLayout() {
           scrolled ? 'bg-white/90 text-black shadow-2xl backdrop-blur-xl' : 'bg-white/10 text-white backdrop-blur-md'}`}>
           <Link to="/" className="flex items-center gap-3">
             <img src={Logo} alt="" className="h-10 w-10 object-contain" />
-            <span className="text-xl font-semibold tracking-tight">SandBox</span>
+            <span className="text-xl font-semibold tracking-tight">SandBox Sync</span>
           </Link>
           <nav className="hidden items-center gap-1 lg:flex">
             {links.map(([to, label]) => (
@@ -97,7 +97,7 @@ export default function PublicLayout() {
         <div className="mx-auto max-w-[1400px] px-6 pt-20">
           <div className="grid gap-12 pb-16 lg:grid-cols-[1.1fr_1fr]">
             <div>
-              <div className="flex items-center gap-3"><img src={Logo} alt="" className="h-11 w-11 object-contain" /><span className="text-xl font-semibold">SandBox</span></div>
+              <div className="flex items-center gap-3"><img src={Logo} alt="" className="h-11 w-11 object-contain" /><span className="text-xl font-semibold">SandBox Sync</span></div>
               <p className="mt-5 max-w-md leading-7 text-white/60">A collaborative platform where students, startups and investors share proposals, sign NDAs and track funding in one place.</p>
               <div className="mt-7 flex gap-3">{[Facebook, Twitter, Linkedin, Instagram].map((I, k) => <a key={k} href="#" aria-label="Social link" className="flex h-11 w-11 items-center justify-center rounded-xl bg-white/[0.07] transition hover:bg-[#e39622] hover:text-black"><I className="h-4 w-4" /></a>)}</div>
             </div>
@@ -141,7 +141,7 @@ export default function PublicLayout() {
               <li className="flex gap-3"><Phone className="mt-0.5 h-5 w-5 shrink-0 text-[#e39622]" />+92 313 2820530</li>
               <li className="flex gap-3"><MapPin className="mt-0.5 h-5 w-5 shrink-0 text-[#e39622]" />Barani Institute of Sciences, Chichawatni Road, Burewala</li></ul></div>
           </div>
-          <div className="flex flex-col items-center justify-between gap-3 border-t border-white/10 py-7 text-sm text-white/45 sm:flex-row"><p>© {new Date().getFullYear()} SandBox. All rights reserved.</p><p>Connecting innovation with investment.</p></div>
+          <div className="flex flex-col items-center justify-between gap-3 border-t border-white/10 py-7 text-sm text-white/45 sm:flex-row"><p>© {new Date().getFullYear()} SandBox Sync. All rights reserved.</p><p>Connecting innovation with investment.</p></div>
         </div>
       </footer>
     </div>
