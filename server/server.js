@@ -133,6 +133,7 @@ import connectionRouter from './routes/connectionRoutes.js';
 import stripeRoutes from './routes/stripeRoutes.js';
 import dashboardRoutes from './routes/dashboardRoutes.js';
 import proposalRoutes from './routes/proposalRoutes.js';
+import newsletterRoutes from './routes/newsletterRoutes.js';
 import { handleStripeWebhook } from './controller/stripeController.js'; // Import the webhook specifically
 import { Server } from 'socket.io';
 import { createServer } from 'http';
@@ -194,6 +195,7 @@ app.use('/api/notifications', notificationRoutes);
 app.use('/api/research', researchRoutes);
 app.use('/api/users', userRoutes);
 app.use('/api/messages', messageRouter);
+app.use('/api/newsletter', newsletterRoutes);
 app.use('/api', authRoutes); 
 
 // Database connection

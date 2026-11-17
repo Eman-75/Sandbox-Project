@@ -55,13 +55,13 @@ export default function AppRoutes() {
     <Routes>
       {/* Investor Routes */}
       <Route path="/investor" element={
-          <ProtectedRoute allowedRoles={['investor']}>
-            <DashboardLayout role="Investor" />
-          </ProtectedRoute>
-        }>
+        <ProtectedRoute allowedRoles={['investor']}>
+          <DashboardLayout role="Investor" />
+        </ProtectedRoute>
+      }>
         <Route index element={<InvestorDashboard />} />
         <Route path="dashboard" element={<InvestorDashboard />} />
-        <Route path="explore" element={<Explore/>} />
+        <Route path="explore" element={<Explore />} />
         <Route path="messages" element={<InvestorMessages />} />
         <Route path="portfolio" element={<InvestorPortfolio />} />
         <Route path="proposals" element={<InvestorProposals />} />
@@ -74,10 +74,10 @@ export default function AppRoutes() {
 
       {/* Startup Routes */}
       <Route path="/startup" element={
-          <ProtectedRoute allowedRoles={['startup']}>
-            <DashboardLayout role="Startup" />
-          </ProtectedRoute>
-        }>
+        <ProtectedRoute allowedRoles={['startup']}>
+          <DashboardLayout role="Startup" />
+        </ProtectedRoute>
+      }>
         <Route index element={<StartupDashboard />} />
         <Route path="dashboard" element={<StartupDashboard />} />
         <Route path="investors" element={<StartupInvestors />} />
@@ -93,10 +93,10 @@ export default function AppRoutes() {
 
       {/* Admin Routes */}
       <Route path="/admin" element={
-          <ProtectedRoute allowedRoles={['admin']}>
-            <DashboardLayout role="Admin" />
-          </ProtectedRoute>
-        }>
+        <ProtectedRoute allowedRoles={['admin']}>
+          <DashboardLayout role="Admin" />
+        </ProtectedRoute>
+      }>
         <Route index element={<AdminDashboard />} />
         <Route path="dashboard" element={<AdminDashboard />} />
         <Route path="users" element={<AdminUsers />} />
@@ -107,10 +107,10 @@ export default function AppRoutes() {
 
       {/* Student Routes */}
       <Route path="/student" element={
-          <ProtectedRoute allowedRoles={['student']}>
-            <DashboardLayout role="Student" />
-          </ProtectedRoute>
-        }>
+        <ProtectedRoute allowedRoles={['student']}>
+          <DashboardLayout role="Student" />
+        </ProtectedRoute>
+      }>
         <Route index element={<StudentDashboard />} />
         <Route path="dashboard" element={<StudentDashboard />} />
         <Route path="startups" element={<StudentStartups />} />
