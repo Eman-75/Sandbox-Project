@@ -1,7 +1,7 @@
 import ResearchIdeas from '../models/ResearchIdeas.js';
 import OpenAI from 'openai';
 import PDFParser from "pdf2json";
-import cloudinary from 'cloudinary';
+import cloudinary from '../lib/cloudinary.js';
 import streamifier from 'streamifier';
 
 // ✅ Groq setup (FREE)
@@ -12,7 +12,7 @@ const openai = new OpenAI({
 
 const uploadPDF = (buffer) => {
     return new Promise((resolve, reject) => {
-        const stream = cloudinary.v2.uploader.upload_stream(
+        const stream = cloudinary.uploader.upload_stream(
             {
                 resource_type: "raw", // 🔥 REQUIRED for PDF
                 folder: "research_papers" // optional but good
@@ -100,7 +100,7 @@ ${slicedText}
 
         // ✅ Groq API call (FREE LLM)
         const completion = await openai.chat.completions.create({
-            model: "llama-3.3-70b-versatile",
+            model: "qwen/qwen3.8-27b",
             messages: [
                 { role: "system", content: "You are a strict JSON generator. Always return valid JSON only." },
                 { role: "user", content: prompt }

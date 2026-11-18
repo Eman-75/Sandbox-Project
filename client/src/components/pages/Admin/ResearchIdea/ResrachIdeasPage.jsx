@@ -35,7 +35,7 @@ const ResearchIdeasPage = () => {
       setAiData(res.data.data);
     } catch (err) {
       console.error(err);
-      alert("Error processing file");
+      alert(err.response?.data?.message || "Error processing file");
     } finally {
       setLoading(false);
     }
